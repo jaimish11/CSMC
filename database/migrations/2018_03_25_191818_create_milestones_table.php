@@ -22,10 +22,12 @@ class CreateMilestonesTable extends Migration
             $table->date('end_date');
             $table->date('updated_date');
             $table->boolean('is_check');
-            //$table->boolean('is_active')->default(1);
-            $table->integer('image_id')->unsigned();
+            $table->string('image_url');
+            $table->string('longitude')->nullable();
+            $table->string('latitude')->nullable();
+            //$table->integer('image_id')->unsigned();
             $table->integer('project_id')->unsigned();
-            $table->foreign('image_id')->references('id')->on('images')->onDelete('cascade')->onUpdate('cascade');
+            //$table->foreign('image_id')->references('id')->on('images')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });

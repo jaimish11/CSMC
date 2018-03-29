@@ -25,7 +25,7 @@ class CreateProjectsTable extends Migration
             $table->integer('approved_amount')->nullable();
             $table->integer('noof_milestones');
             $table->integer('comp_milestones');
-            //$table->boolean('is_active')->default(1);
+            $table->boolean('is_active')->default(1);
             $table->string('updated_by')->nullable();
             $table->string('location');
             $table->integer('contractor_id')->unsigned();

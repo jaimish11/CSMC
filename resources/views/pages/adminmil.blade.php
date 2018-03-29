@@ -33,7 +33,8 @@
         <td>{{$milestone->project_id}}</td>
         
         
-       <td><a class="waves-effect waves-light btn-small black">View image</a></td>
+       <td><a href="/dashboard/{{$milestone->id}}/images" class="waves-effect waves-light btn-small black">View image</a></td>
+       <td><a href="/dashboard/{{$milestone->id}}/edit"></a></td>
        <td><a href="{{action('AdminController@edit', $milestone['id'])}}" class="waves-effect waves-light btn-small blue">Edit</a></td>
        <td>
         <form action="{{action('AdminController@destroy', $milestone['id'])}}" method="post">

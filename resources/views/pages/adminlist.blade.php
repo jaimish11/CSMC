@@ -1,4 +1,5 @@
 
+
   <table class="highlight responsive-table">
       <thead>
         <tr>
@@ -33,4 +34,21 @@
         @endforeach
       </tbody>
     </table>
+
+      <div class="row">
+  <div class="col s12 m6 l6">
+    <div class="card blue-grey lighten-3">
+      <div class="card-content">
+        <form action="/dashboard/import"  method="POST" enctype="multipart/form-data">
+          {{csrf_field()}}
+            <input type="file" name="file" style="padding-bottom:1em; ">
+            <p style="color:red;" >{{$errors->first('file')}}</p>
+            <input type="submit" name="submit" value="Import" class="btn btn-small">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 

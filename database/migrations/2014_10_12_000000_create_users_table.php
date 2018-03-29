@@ -23,6 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('aadhar')->nullable();
             $table->string('pan')->nullable();
             $table->boolean('is_admin')->default(0);
+            $table->boolean('is_superadmin')->default(0);
             //$table->boolean('is_active')->default(1);
             //$table->integer('role_id')->unsigned();
             //$table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade')->onUpdate('cascade');

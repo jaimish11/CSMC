@@ -28,7 +28,7 @@
         <td>{{$project['location']}}</td>
         <td>{{$project['contractor_id']}}</td>
         
-       <td><a href="/projects/{{ $project->id }}" class="waves-effect waves-light btn-large black">View</a></td>
+       <td><a href="/projects/{{$project->id}}" class="waves-effect waves-light btn-large black">View</a></td>
         <td>
           
         </td>

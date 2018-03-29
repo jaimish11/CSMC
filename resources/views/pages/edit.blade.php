@@ -12,7 +12,7 @@
             <div class="card-content">
               <form method="post" action="{{action('AdminController@update', $id)}}">
               @csrf
-              <input name="_method" type="hidden" value="PATCH">
+              <input name="_method" type="hidden" value="put">
               <div class="row">
                 <div class="col-md-4"></div>
                 <div class="form-group col-md-4">

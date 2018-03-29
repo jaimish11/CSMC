@@ -13,7 +13,8 @@
 
 Route::get('/projects', 'ProjectController@index');
 Route::get('/projects/{id}','ProjectController@viewMilestones');
-//Route::get('projects/{project_id}/image','ImageController@')
+//Route::get('projects/{project_id}/{milestone_id}','ImageController@show');
+Route::post('projects/{project_id}/{milestone_id}','ImageController@store');
 
 
 // GET projects/{project_id}/milestones/{milestone_id}
@@ -25,8 +26,9 @@ Route::get('/projects/{id}','ProjectController@viewMilestones');
 Route::get('/dashboard','AdminController@index'); 
 Route::get('/dashboard/{project_id}','AdminController@viewMilestones'); 
 Route::delete('/dashboard/{id}','AdminController@destroy'); 
-Route::get('/dashboard/{milestones_id}/edit','AdminController@edit');
-Route::post('/dashboard/{mileid}','AdminController@update'); 
+Route::get('/dashboard/{milestone_id}/edit','AdminController@edit');
+Route::put('/dashboard/{milestone_id}','AdminController@update'); 
+Route::post('/dashboard/import','ExcelController@store');
  
 //Route::group(['middleware' => ['web', 'auth']], function () {
    

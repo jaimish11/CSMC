@@ -80,10 +80,10 @@ class AdminController extends Controller
     public function update(Request $request,$id)
     {
         $mile = Milestone::find($id);
-        $mile->name = $request->get('name');
-        $mile->description = $request->get('description');
-        $mile->start_date = $request->get('start_date');
-        $mile->end_date = $request->get('end_date');
+        $mile->title = $request->input('name');
+        $mile->description = $request->input('description');
+        $mile->start_date = $request->input('start_date');
+        $mile->end_date = $request->input('end_date');
         $mile->save();
         return redirect('/dashboard');
     }
